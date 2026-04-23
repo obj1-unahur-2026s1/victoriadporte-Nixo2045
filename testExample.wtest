@@ -1,9 +1,28 @@
-import example.pepita
+import victoria.*
+import disciplinas.*
 
-describe "group of tests for pepita" {
+describe "Victoria se parece a Pareto" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  method initialize() {
+    victoria.altura(150)
+    victoria.disciplina(judo)
+    victoria.cantidadDeEntrenadores(4)
+  }
+
+  test "Ahora mide 150 cm" {
+    assert.equals(150, victoria.altura())
+  }
+
+  test "Ahora practica judo" {
+    assert.equals(judo, victoria.disciplina())
+  }
+
+    test "Ahora tiene 4 entrenadores" {
+    assert.equals(4, victoria.cantidadDeEntrenadores())
+  }
+
+  test "Si es Pareto su presupuesto es..." {
+    assert.equals(7540 + 480, victoria.presupuesto())
   }
 
 }
